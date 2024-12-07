@@ -39,14 +39,14 @@ jobs:
     steps:
         - uses: actions/checkout@v3
 
-        - name: Install Vercel CLI
+        - name: Instala o CLI do Vercel
           run: npm install --global vercel
 
-        - name: Pull Vercel Environment Information
-          run: vercel pull --yes --environment=production --token=${{ secrets.VERCEL_TOKEN }}
+        - name: Traz informações de ambiente do Vercel
+          run: vercel pull --yes --environment=preview --token=${{ secrets.VERCEL_TOKEN }}
 
-        - name: Build Project Artifacts
+        - name: Realiza o build dos artefatos do projeto
           run: vercel build --token=${{ secrets.VERCEL_TOKEN }}
 
-        - name: Deploy Project Artifacts
+        - name: Realiza o deploy dos artefatos do projeto
           run: vercel deploy --prebuilt --token=${{ secrets.VERCEL_TOKEN }}
