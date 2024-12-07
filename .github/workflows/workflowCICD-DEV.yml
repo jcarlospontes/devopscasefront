@@ -35,9 +35,10 @@ jobs:
 
   job-CD:
     runs-on: ubuntu-latest
-      steps:
-        - name: Instalando Vercel CLI
-          uses: actions/checkout@v3
+    steps:
+        - uses: actions/checkout@v3
+
+        - name: Install Vercel CLI
           run: npm install --global vercel
 
         - name: Pull Vercel Environment Information
