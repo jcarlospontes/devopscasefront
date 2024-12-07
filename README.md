@@ -3,6 +3,8 @@
 Este repositório tem o objetivo de apresentar o resultado da avaliação para o estágio em DevOps, seguindo as instruções disponíveis em https://github.com/goca-se/devopscasefront
 O projeto consiste em uma aplicação web em Node.js que, posteriormente, deverá ser integrada com a aplicação backend disponível no repositório https://github.com/jcarlospontes/devopscaseback
 
+A aplicação no Vercel está disponível no link https://devops-gocase-front-868zz8ry9-joao-carlos-projects-1952645c.vercel.app/
+
 ## Objetivo
 
 Criar um Dockerfile para executar a aplicação em um container Docker.
