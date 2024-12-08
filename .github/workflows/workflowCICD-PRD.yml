@@ -50,3 +50,18 @@ jobs:
     
         - name: Deploy Project Artifacts
           run: vercel deploy --prebuilt --prod --token=${{ secrets.VERCEL_TOKEN }}
+
+  job-DockerHub:
+    needs: job-CI
+    runs-on: ubuntu-latest
+    steps:
+        uses: actions/checkout@v3
+
+        - name: Hospeda a imagem no DockerHub
+          env:
+            DOCKER_USER: ${{ secrets.DOCKER_USER }}
+            DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
+          run: | 
+            docker login -u $DOCKER_USER -p $DOCKER_PASSWORD
+            docker build ./devopscasefront -t $DOCKER_USER/front-app-gocase:latest
+            docker push $DOCKER_USER/front-app-gocase:latest
