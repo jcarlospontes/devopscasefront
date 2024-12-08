@@ -55,7 +55,7 @@ jobs:
     needs: job-CI
     runs-on: ubuntu-latest
     steps:
-        uses: actions/checkout@v3
+        - uses: actions/checkout@v3
 
         - name: Hospeda a imagem no DockerHub
           env:
