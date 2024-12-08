@@ -49,6 +49,8 @@ Para a solução, foram realizadas as seguintes etapas:
    - **node:22-alpine**: Imagem com um ambiente em node na versão alpine necessário para realizar a instalação das dependências do projeto em node e realizar o build do projeto. A versão 22 foi escolhida pois se trata de uma versão do note recente e faz parte das versões estaveis. A configuração de imagem alpine foi escolhida pois essa nomenclatura se refere a uma imagem leve e segura.
      
    - **nginx:1.22-alpine**: Imagem com um ambiente instalado com nginx. O nginx é uma ferramenta importante que disponibiliza um servidor web que pode ser utilizado para expor várias aplicações frontend. A escolha do nginx foi feita pois conseguimos ter um nível de configuração avançada de endpoints e segurança para a nossa aplicação. A versão 1.22 foi utilizada por ter mais tempo e ser estavel e a nomenclatura alpine foi escolhida pelos mesmos motivos da imagem do node.
+  
+   Foi utilizado um proxy reverso para o o nginx conseguir mapear o endpoint /api-docs do backend para o mesmo endpoint do frontend.
 
 3. Criação de **dois workflows** executados em um ambiente Ubuntu atualizado:
    
