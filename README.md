@@ -31,14 +31,14 @@ cd devopscasefront
 ```
 Crie a imagem da aplicação a partir do Dockerfile:
 ```console
-docker build -t front-app .
+docker build -t front-app-gocase .
 ```
 Execute a aplicação em segundo plano usando a flag -d e mapeie a porta 80 do host para a porta 80 do container:
 bash
 Copiar código
 
 ```console
-docker run -d -p 80:80 front-app
+docker run -d -p 80:80 front-app-gocase
 ```
 
 ## O que foi feito?
